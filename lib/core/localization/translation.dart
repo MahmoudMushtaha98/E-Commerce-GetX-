@@ -40,7 +40,11 @@ class MyTranslation extends Translations {
           'Enter Your Phone Number': 'أدخل رقم الهاتف',
           'Address': 'السكن',
           'Enter Your Address': 'أدخل مكان السكن',
-          'By continuing your confirm that you agree with our term and condition':"من خلال الاستمرار فأنت تأكيد موافقتك على الشروط والأحكام الخاصة بنا"
+          'By continuing your confirm that you agree with our term and condition':
+              "من خلال الاستمرار فأنت تأكيد موافقتك على الشروط والأحكام الخاصة بنا",
+          'Resend OTP Code': 'أعد ارسال رمز التحقق',
+          'OTP Verification': 'رمز التحقق',
+          'We sent your code to +1 898 860 *** This code will expired in 00:13':'تم ارسال رمز التحقق الى +1 898 860 *** هذا الرمز تنتهي صلاحيته بعد 00:13'
         },
         'en': {
           'lang': 'Chose language',
@@ -80,7 +84,11 @@ class MyTranslation extends Translations {
           'Address': 'Address',
           'Enter Your Address': 'Enter Your Address',
           'By continuing your confirm that you agree with our term and condition':
-              'By continuing your confirm that you agree with our term and condition'
+              'By continuing your confirm that you agree with our term and condition',
+          'Resend OTP Code': 'Resend OTP Code',
+          'OTP Verification': 'OTP Verification',
+          'We sent your code to +1 898 860 *** This code will expired in 00:13':
+              'We sent your code to +1 898 860 *** This code will expired in 00:13'
         }
       };
 }

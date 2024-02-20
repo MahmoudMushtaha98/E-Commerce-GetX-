@@ -1,5 +1,4 @@
 import 'package:e_commerce_getx/controller/login_controller.dart';
-import 'package:e_commerce_getx/controller/onboarding_controller.dart';
 import 'package:e_commerce_getx/core/constant/const_color.dart';
 import 'package:e_commerce_getx/core/constant/fontTyps.dart';
 import 'package:flutter/material.dart';
@@ -7,9 +6,9 @@ import 'package:get/get_state_manager/src/simple/get_view.dart';
 
 class TextFormFieldWidget extends GetView<LogInController> {
   final double width;
-  final String hintText;
-  final String label;
-  final IconData iconData;
+  final String? hintText;
+  final String? label;
+  final IconData? iconData;
   final GlobalKey<FormState> formKey;
   final String? Function(String?)? callback;
   final TextEditingController contr;
@@ -19,9 +18,9 @@ class TextFormFieldWidget extends GetView<LogInController> {
   const TextFormFieldWidget({
     super.key,
     required this.width,
-    required this.hintText,
-    required this.label,
-    required this.iconData,
+    this.hintText,
+    this.label,
+    this.iconData,
     required this.formKey,
     this.callback,
     required this.contr,
@@ -54,14 +53,14 @@ class TextFormFieldWidget extends GetView<LogInController> {
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
                 borderSide: BorderSide(color: grayColor)),
-            label: Text(
-              hintText,
+            label: hintText != null ?Text(
+              hintText!,
               style: TextStyle(
                 fontWeight: FontWeight.w200,
                 color: grayColor,
                   fontFamily:
                       controller.language!.contains('en') ? english : arabic),
-            ),
+            ):null,
             hintText: label,
             hintStyle: TextStyle(
               color: grayColor,
