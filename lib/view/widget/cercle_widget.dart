@@ -1,3 +1,4 @@
+import 'package:e_commerce_getx/core/constant/const_color.dart';
 import 'package:flutter/material.dart';
 
 class CircleWidget extends StatelessWidget {
@@ -11,9 +12,14 @@ class CircleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      padding: EdgeInsets.all(8),
       width: width,
       height: width,
+      decoration: BoxDecoration(
+        color: grayColor.withOpacity(0.3),
+        shape: BoxShape.circle
+      ),
       child: ClipRRect(
         borderRadius: BorderRadiusDirectional.circular(20),
           child: Image.asset(url)),
