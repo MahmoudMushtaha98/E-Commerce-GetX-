@@ -1,3 +1,4 @@
+import 'package:e_commerce_getx/view/screens/navigation_bar.dart';
 import 'package:e_commerce_getx/view/screens/signup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -15,7 +16,7 @@ class LogInController extends GetxController {
 
   void logIn(){
     if(emailFormKey.currentState!.validate() && passFormKey.currentState!.validate()){
-
+      Get.offAllNamed(HomeNavigationBar.screenRoute);
     }
   }
 

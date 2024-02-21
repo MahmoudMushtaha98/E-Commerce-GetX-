@@ -1,4 +1,5 @@
 import 'package:e_commerce_getx/view/screens/complete_profile_screen.dart';
+import 'package:e_commerce_getx/view/screens/navigation_bar.dart';
 import 'package:e_commerce_getx/view/screens/lang_screen.dart';
 import 'package:e_commerce_getx/view/screens/login_screen.dart';
 import 'package:e_commerce_getx/view/screens/onboarding_screen.dart';
@@ -30,5 +31,9 @@ List<GetPage<dynamic>>? route = [
   GetPage(
     name: OTPScreen.screenRoute,
     page: () => const OTPScreen(),
+  ),
+  GetPage(
+    name: HomeNavigationBar.screenRoute,
+    page: () => const HomeNavigationBar(),
   )
 ];

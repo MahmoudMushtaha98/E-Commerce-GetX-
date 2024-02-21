@@ -1,0 +1,48 @@
+
+import 'package:flutter/material.dart';
+
+class ProductWidget extends StatelessWidget {
+  const ProductWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 170,
+      height: 270,
+      child: Column(
+        children: [
+          Expanded(
+              flex: 60,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20)),
+                child: Image.network(
+                  'https://www.shutterstock.com/image-photo/glass-jar-beauty-cream-golden-600nw-2179335315.jpg',
+                  fit: BoxFit.cover,
+                ),
+              )),
+          const Expanded(
+              flex: 40,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Hiar Cream',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  SizedBox(height: 10,),
+                  Text(
+                    'Hiar Cream Hiar Cream Hiar Cream Hiar Cream Hiar Cream Hiar Cream',
+                    maxLines: 2,
+                    style: TextStyle(overflow: TextOverflow.ellipsis,fontSize: 14),
+                  ),
+                ],
+              ))
+        ],
+      ),
+    );
+  }
+}

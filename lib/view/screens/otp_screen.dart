@@ -2,10 +2,8 @@ import 'package:e_commerce_getx/controller/otp_controller.dart';
 import 'package:e_commerce_getx/core/constant/dimensions.dart';
 import 'package:e_commerce_getx/view/widget/login_widget/login_button_widget.dart';
 import 'package:e_commerce_getx/view/widget/login_widget/title_sub_title.dart';
-import 'package:e_commerce_getx/view/widget/text_form_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../core/constant/const_color.dart';
 import '../widget/otp_widget/OTPTextField.dart';
 

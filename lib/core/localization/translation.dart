@@ -44,7 +44,12 @@ class MyTranslation extends Translations {
               "من خلال الاستمرار فأنت تأكيد موافقتك على الشروط والأحكام الخاصة بنا",
           'Resend OTP Code': 'أعد ارسال رمز التحقق',
           'OTP Verification': 'رمز التحقق',
-          'We sent your code to +1 898 860 *** This code will expired in 00:13':'تم ارسال رمز التحقق الى +1 898 860 *** هذا الرمز تنتهي صلاحيته بعد 00:13'
+          'We sent your code to +1 898 860 *** This code will expired in 00:13':
+              'تم ارسال رمز التحقق الى +1 898 860 *** هذا الرمز تنتهي صلاحيته بعد 00:13',
+          'Product':'منتجات',
+          'Services':'خدمات',
+          'Market':'تسوق',
+          'Restaurant':'مطاعم'
         },
         'en': {
           'lang': 'Chose language',
@@ -88,7 +93,11 @@ class MyTranslation extends Translations {
           'Resend OTP Code': 'Resend OTP Code',
           'OTP Verification': 'OTP Verification',
           'We sent your code to +1 898 860 *** This code will expired in 00:13':
-              'We sent your code to +1 898 860 *** This code will expired in 00:13'
+              'We sent your code to +1 898 860 *** This code will expired in 00:13',
+          'Product': 'Product',
+          'Services': 'Services',
+          'Market': 'Market',
+          'Restaurant': 'Restaurant'
         }
       };
 }
