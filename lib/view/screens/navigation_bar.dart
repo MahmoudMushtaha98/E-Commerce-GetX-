@@ -2,6 +2,7 @@ import 'package:e_commerce_getx/controller/nav_bar_controller.dart';
 import 'package:e_commerce_getx/core/constant/const_color.dart';
 import 'package:e_commerce_getx/core/constant/dimensions.dart';
 import 'package:e_commerce_getx/view/screens/profile_screen.dart';
+import 'package:e_commerce_getx/view/screens/services_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -18,6 +19,7 @@ class HomeNavigationBar extends StatelessWidget {
     Get.put(HomeNavigationBarController());
     return GetBuilder<HomeNavigationBarController>(
       builder: (controller) => Scaffold(
+        extendBody: true,
         bottomNavigationBar: Padding(
           padding: EdgeInsets.only(
               left: width(context) * 0.03,
@@ -31,7 +33,8 @@ class HomeNavigationBar extends StatelessWidget {
               },
               destinations: [
                 NavigationDestination(
-                  icon: Container(
+                  icon: AnimatedContainer(
+                    duration: const Duration(milliseconds: 500),
                       width: width(context) * 0.2,
                       decoration: BoxDecoration(
                           color: controller.currentIndex == 0
@@ -49,7 +52,8 @@ class HomeNavigationBar extends StatelessWidget {
                   label: '',
                 ),
                 NavigationDestination(
-                  icon: Container(
+                  icon: AnimatedContainer(
+                      duration: const Duration(milliseconds: 500),
                       width: width(context) * 0.2,
                       decoration: BoxDecoration(
                           color: controller.currentIndex == 1
@@ -67,7 +71,8 @@ class HomeNavigationBar extends StatelessWidget {
                   label: '',
                 ),
                 NavigationDestination(
-                  icon: Container(
+                  icon: AnimatedContainer(
+                      duration: const Duration(milliseconds: 500),
                       width: width(context) * 0.2,
                       decoration: BoxDecoration(
                           color: controller.currentIndex == 2
@@ -87,7 +92,8 @@ class HomeNavigationBar extends StatelessWidget {
                   label: '',
                 ),
                 NavigationDestination(
-                  icon: Container(
+                  icon: AnimatedContainer(
+                      duration: const Duration(milliseconds: 500),
                       width: width(context) * 0.2,
                       decoration: BoxDecoration(
                           color: controller.currentIndex == 3
@@ -116,9 +122,7 @@ class HomeNavigationBar extends StatelessWidget {
           Container(
             color: Colors.white,
           ),
-          Container(
-            color: Colors.white,
-          ),
+          const ServicesScreen(),
           const ProfileScreen(),
         ][controller.currentIndex],
       ),

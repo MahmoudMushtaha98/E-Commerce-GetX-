@@ -13,7 +13,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(HomeController());
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text(
+          'Hello, Mahmoud !',
+          style: TextStyle(fontWeight: FontWeight.w500),
+        ),
+        centerTitle: true,
+      ),
       body: ListView(
         children: [
           Column(
@@ -33,7 +39,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               SizedBox(
                 width: width(context) * 0.9,
-                child:  Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CategoriesWidget(
@@ -110,5 +116,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
