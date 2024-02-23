@@ -1,6 +1,7 @@
 import 'package:e_commerce_getx/controller/nav_bar_controller.dart';
 import 'package:e_commerce_getx/core/constant/const_color.dart';
 import 'package:e_commerce_getx/core/constant/dimensions.dart';
+import 'package:e_commerce_getx/view/screens/product_screen.dart';
 import 'package:e_commerce_getx/view/screens/profile_screen.dart';
 import 'package:e_commerce_getx/view/screens/services_screen.dart';
 import 'package:flutter/material.dart';
@@ -119,10 +120,8 @@ class HomeNavigationBar extends StatelessWidget {
         ),
         body: [
           const HomeScreen(),
-          Container(
-            color: Colors.white,
-          ),
           const ServicesScreen(),
+          const ProductScreen(),
           const ProfileScreen(),
         ][controller.currentIndex],
       ),

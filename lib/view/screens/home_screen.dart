@@ -79,33 +79,16 @@ class HomeScreen extends StatelessWidget {
                     style: TextStyle(color: Colors.black),
                   )),
               const SizedBox(
-                height: 40,
+                height: 20,
               ),
               SizedBox(
-                height: 220,
+                height: 270,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 8.0),
-                  child: ListView(
+                  child: ListView.builder(
+                    itemBuilder: (context, index) => ProductWidget(),
+                    itemCount: 10,
                     scrollDirection: Axis.horizontal,
-                    children: const [
-                      ProductWidget(),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      ProductWidget(),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      ProductWidget(),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      ProductWidget(),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      ProductWidget(),
-                    ],
                   ),
                 ),
               )
