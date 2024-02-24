@@ -120,8 +120,8 @@ class HomeNavigationBar extends StatelessWidget {
         ),
         body: [
           const HomeScreen(),
-          const ServicesScreen(),
           const ProductScreen(),
+          const ServicesScreen(),
           const ProfileScreen(),
         ][controller.currentIndex],
       ),

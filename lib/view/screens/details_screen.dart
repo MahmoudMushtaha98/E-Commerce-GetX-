@@ -1,5 +1,6 @@
+import 'package:e_commerce_getx/core/constant/dimensions.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import '../../core/constant/const_color.dart';
 
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({super.key});
@@ -32,8 +33,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       onPressed: (){
                         Navigator.pop(context);
                       },
-                      icon: Icon(
-                        Icons.heart_broken,
+                      icon: const Icon(
+                        Icons.arrow_back_ios_new_outlined,
+                        color: Colors.black,
                       )
                     ),
                   ),
@@ -47,26 +49,21 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Padding(
-                      padding:const EdgeInsets.all(8.0),
+                    child: const Padding(
+                      padding:EdgeInsets.all(8.0),
                       child:  Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text('4.8',
+                          Text('4.8',
                               style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold
                               )),
-                          const SizedBox(
+                          SizedBox(
                             width: 10,
                           ),
-                          Container(
-                            child: SvgPicture.asset(
-                              'assets/icons/Star Icon.svg',
-                              width: 15,
-                              height: 15,
-                            ),
-                          ),
+                          Icon(Icons.star,
+                          color: Colors.yellow,)
 
                         ],
                       ),
@@ -78,59 +75,66 @@ class _DetailsScreenState extends State<DetailsScreen> {
           ),
           Column(
             children: [
-              Container(
+              SizedBox(
                 width: 238,
                 child: AspectRatio(aspectRatio:1,
-                  child: Image.asset(''),),
+                  child: Image.network('https://media.post.rvohealth.io/wp-content/uploads/2020/09/AN313-Tomatoes-732x549-Thumb-732x549.jpg',fit: BoxFit.cover),),
               ),
             ],
           ),
-          Container(
-            width: double.infinity,
-            height: 380,
-            margin:const EdgeInsets.only(top: 20),
-            padding:const EdgeInsets.only(top: 20),
-            decoration:const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight:Radius.circular(40) )
-            ),
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              height: 380,
+              margin:const EdgeInsets.only(top: 20),
+              padding:const EdgeInsets.only(top: 20),
+              decoration:const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(topLeft:Radius.circular(40),topRight:Radius.circular(40) )
+              ),
+              child: ListView(
                 children: [
-                  const Padding(
-                    padding:  EdgeInsets.symmetric(horizontal: 20.0),
-                    child:  Text('Wireless Controller for PS4™',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                        fontFamily: 'Muli',
-                      ),),
-                  ),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: Container(
-                      width: 64,
-                      padding: const EdgeInsets.all(15),
-                      decoration:const  BoxDecoration(
-                        color: Color(0xFFfeeae3),
-                        borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0),bottomLeft: Radius.circular(20.0)),
-                      ),
-                      child:  SvgPicture.asset(
-                        'assets/icons/Heart Icon_2.svg',
-                        color: Colors.red,
-                      ),
+                  Padding(
+                    padding:  const EdgeInsets.symmetric(horizontal: 20.0), 
+                    child:  Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text('Tomato™',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w400,
+                    ),),
+            
+                  Container(
+                    padding: const EdgeInsets.all(5),
+                    margin:  const EdgeInsets.only(bottom: 8),
+                    width: width(context)*0.25,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade300,
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    child:const Center(
+                      child:  Text('0.25\$ Kg',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                        ),),
                     ),
                   ),
+                ],
+              ),
+            ),
                   Padding(
                     padding: const EdgeInsets.only(left: 20.0,right: 64.0),
                     child: Text(maxLines: lineText,
-                      'Overall, the wireless controller for PS4™ is a central element in the gaming experience, providing users with the means to interact seamlessly with their favorite games on the PlayStation 4 console. Its ergonomic design, advanced features, and wireless capabilities contribute to an immersive and enjoyable gaming experience.',
+                      'Tomatoes are known for their juicy flesh and slightly tangy flavor. They are versatile and can be consumed raw in salads, sandwiches, or as a snack, as well as cooked in sauces, soups, stews, and various other dishes. Tomatoes are rich in vitamins C and K, as well as potassium and folate. The tomato fruit varies in size from small cherry tomatoes to larger beefsteak tomatoes, and it comes in various colors such as red, yellow, orange, green, and even purple, depending on the variety. Tomatoes are often harvested when they are still firm and ripened off the vine for better transportation and storage.',
                       style:const TextStyle(
                         color: Colors.grey,
                         fontSize: 16,
-                        fontFamily: 'Muli',
+            
                       ),
                     ),
                   ),
@@ -150,49 +154,76 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       child: Row(
                         children: [
                           Text(lineText==3? 'See More Detail':'See less details',
-                            style:const TextStyle(
+                            style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w600,
-                              color: Colors.orange,
-                              fontFamily: 'Muli',
+                              color:buttonColor,
                             ), ),
                           const SizedBox(width: 5,),
-                          const Icon(Icons.arrow_forward_ios,size: 12,color: Colors.orange,)
+                          Icon(Icons.arrow_forward_ios,size: 12,color: buttonColor,)
                         ],
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    height: 93,
-                    width: double.infinity,
-                    decoration:const  BoxDecoration(
-                      color: Color(0xFFE7E7E7),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(40),
-                        topRight: Radius.circular(40),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 50,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: Colors.black26)
+                    ),
+                    child: TextFormField(
+                      keyboardType: TextInputType.number,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 20,
+                      ),
+                      decoration: const InputDecoration(
+                          border:InputBorder.none,
+                          hintText: 'Quantity \$',
+                          hintStyle: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 20,
+                          )
                       ),
                     ),
                   ),
-                ],
-
-              ),
+                ),
+                SizedBox(width: width(context)*0.05,),
+                Expanded(
+                  child: InkWell(
+                    child: Container(
+                      height: 50,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20)
+                      ),
+                      child:const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('Add To Cart',style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15
+                          ),),
+                          Icon(Icons.shopping_cart_outlined)
+                        ],
+                      )
+                    ),
+                  ),
+                ),
+              ],
             ),
-
-          ),
-          const SizedBox(height: 10,),
-          Container(
-            padding: const EdgeInsetsDirectional.symmetric(vertical: 16.0,horizontal: 60),
-            decoration:const  BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(40),
-                topRight: Radius.circular(40),
-              ),
-            ),
-          ),
+          )
         ],
       ),
     );
