@@ -2,12 +2,7 @@ import 'package:e_commerce_getx/view/screens/otp_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../main.dart';
-
 class CompleteProfileController extends GetxController{
-
-  String? language = sharedPreferences.getString('lang');
-
 
   final fNameKey = GlobalKey<FormState>();
   final lNameKey = GlobalKey<FormState>();

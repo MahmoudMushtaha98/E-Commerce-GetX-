@@ -3,10 +3,7 @@ import 'package:e_commerce_getx/view/screens/signup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../main.dart';
-
 class LogInController extends GetxController {
-  String? language = sharedPreferences.getString('lang');
 
   final emailFormKey = GlobalKey<FormState>();
   final passFormKey = GlobalKey<FormState>();

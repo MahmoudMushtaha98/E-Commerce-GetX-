@@ -2,6 +2,7 @@ import 'package:e_commerce_getx/controller/login_controller.dart';
 import 'package:e_commerce_getx/core/constant/const_color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../core/services/services.dart';
 import '../widget/login_widget/login_button_widget.dart';
 import '../widget/login_widget/login_typs_widget.dart';
 import '../widget/login_widget/signup_button_widget.dart';
@@ -16,13 +17,14 @@ class LogInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     LogInController controller = Get.put(LogInController());
+    Services services = Get.find();
     return Scaffold(
       appBar: AppBar(
         title: Text(
           'Sign In'.tr,
           style: TextStyle(
               color: grayColor,
-              fontFamily: controller.language!.contains('en')
+              fontFamily: services.sharedPreferences.getString('lang')!.contains('en')
                   ? Theme.of(context).textTheme.bodyMedium!.fontFamily
                   : Theme.of(context).textTheme.displayMedium!.fontFamily),
         ),

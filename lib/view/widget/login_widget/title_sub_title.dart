@@ -1,11 +1,10 @@
+import 'package:e_commerce_getx/core/services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../controller/login_controller.dart';
 import '../../../core/constant/const_color.dart';
 import '../../../core/constant/dimensions.dart';
 
-class TitleAndSubTitle extends GetView<LogInController> {
+class TitleAndSubTitle extends GetView<Services> {
   const TitleAndSubTitle({
     required this.title,
     required this.subTitle,
@@ -24,7 +23,7 @@ class TitleAndSubTitle extends GetView<LogInController> {
         children: [
           Text(
             title.tr,
-            style: controller.language!.contains('en')
+            style: controller.sharedPreferences.getString('lang')!.contains('en')
                 ? Theme.of(context).textTheme.labelLarge
                 : Theme.of(context).textTheme.labelMedium,
           ),
@@ -36,7 +35,7 @@ class TitleAndSubTitle extends GetView<LogInController> {
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: grayColor,
-                  fontFamily: controller.language!.contains('en')
+                  fontFamily: controller.sharedPreferences.getString('lang')!.contains('en')
                       ? Theme.of(context).textTheme.labelLarge!.fontFamily
                       : Theme.of(context).textTheme.labelMedium!.fontFamily,
                   fontSize: 15),

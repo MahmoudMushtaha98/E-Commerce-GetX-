@@ -1,5 +1,6 @@
 import 'package:e_commerce_getx/controller/otp_controller.dart';
 import 'package:e_commerce_getx/core/constant/dimensions.dart';
+import 'package:e_commerce_getx/core/services/services.dart';
 import 'package:e_commerce_getx/view/widget/login_widget/login_button_widget.dart';
 import 'package:e_commerce_getx/view/widget/login_widget/title_sub_title.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ class OTPScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     OTPController controller = Get.put(OTPController());
+    Services services = Get.find();
     return Scaffold(
       appBar: AppBar(),
       body: ListView(
@@ -38,7 +40,7 @@ class OTPScreen extends StatelessWidget {
                   color: grayColor,
                   fontSize: 15,
                   fontWeight: FontWeight.w300,
-                  fontFamily: controller.language!.contains('en')
+                  fontFamily: services.sharedPreferences.getString('lang')!.contains('en')
                       ? Theme.of(context).textTheme.bodyMedium!.fontFamily
                       : Theme.of(context).textTheme.displayMedium!.fontFamily),
             ),

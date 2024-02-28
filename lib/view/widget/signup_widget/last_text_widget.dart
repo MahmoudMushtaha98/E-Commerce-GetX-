@@ -1,10 +1,11 @@
 import 'package:e_commerce_getx/controller/signup_controller.dart';
+import 'package:e_commerce_getx/core/services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../core/constant/const_color.dart';
 
-class LastTextWidget extends GetView<SignUpController> {
+class LastTextWidget extends GetView<Services> {
   const LastTextWidget({
     super.key,
   });
@@ -20,7 +21,7 @@ class LastTextWidget extends GetView<SignUpController> {
             color: grayColor,
             fontSize: 15,
             fontWeight: FontWeight.w300,
-            fontFamily: controller.language!.contains('en')
+            fontFamily: controller.sharedPreferences.getString('lang')!.contains('en')
                 ? Theme.of(context).textTheme.bodyMedium!.fontFamily
                 : Theme.of(context).textTheme.displayMedium!.fontFamily),
       ),

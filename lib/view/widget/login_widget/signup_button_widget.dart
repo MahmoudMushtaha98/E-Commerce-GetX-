@@ -1,4 +1,5 @@
 
+import 'package:e_commerce_getx/core/services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../controller/login_controller.dart';
@@ -12,6 +13,7 @@ class SignUpButtonWidget extends GetView<LogInController> {
 
   @override
   Widget build(BuildContext context) {
+    Services services = Get.find();
     return SizedBox(
       height: 60,
       child: Row(
@@ -22,7 +24,7 @@ class SignUpButtonWidget extends GetView<LogInController> {
             style: TextStyle(
                 color: grayColor,
                 fontWeight: FontWeight.w300,
-                fontFamily: controller.language!.contains('en')
+                fontFamily: services.sharedPreferences.getString('lang')!.contains('en')
                     ? Theme.of(context).textTheme.bodyMedium!.fontFamily
                     : Theme.of(context)
                     .textTheme
@@ -36,7 +38,7 @@ class SignUpButtonWidget extends GetView<LogInController> {
               style: TextStyle(
                   color: buttonColor,
                   fontWeight: FontWeight.w300,
-                  fontFamily: controller.language!.contains('en')
+                  fontFamily: services.sharedPreferences.getString('lang')!.contains('en')
                       ? Theme.of(context).textTheme.bodyMedium!.fontFamily
                       : Theme.of(context)
                       .textTheme

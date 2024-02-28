@@ -1,5 +1,6 @@
 import 'package:e_commerce_getx/controller/onboarding_controller.dart';
 import 'package:e_commerce_getx/core/constant/const_color.dart';
+import 'package:e_commerce_getx/core/services/services.dart';
 import 'package:e_commerce_getx/view/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,6 +15,7 @@ class ButtonsWidget extends GetView<OnboardingController> {
 
   @override
   Widget build(BuildContext context) {
+    Services services = Get.find();
     return SizedBox(
       height: 150,
       child: Column(
@@ -33,7 +35,7 @@ class ButtonsWidget extends GetView<OnboardingController> {
                   textColor: Colors.white,
                   fontSize: height(context) * 0.023,
                   fontWeight: FontWeight.w500,
-                  fontFamily: controller.language!.contains('ar') ? Theme
+                  fontFamily: services.sharedPreferences.getString('lang')!.contains('ar') ? Theme
                       .of(context)
                       .textTheme
                       .displayLarge!

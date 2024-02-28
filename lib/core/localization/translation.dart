@@ -18,9 +18,9 @@ class MyTranslation extends Translations {
           'Welcome Back': 'اهلا بعودتك',
           'Sign in with your email and password or continue with social media':
               'قم بتسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور أو تابع باستخدام وسائل التواصل الاجتماعي',
-          'email': 'البريد الالكتروني',
+          'Email': 'البريد الالكتروني',
           'Enter Your Email': 'ادخل البريد الالكروني',
-          'password': 'كلمة المرور',
+          'Password': 'كلمة المرور',
           'Enter Your Password': 'ادخل كلمة المرور',
           'Remember Me': 'تذكرني',
           'Forgot Yor Password': 'نسيت كلمة المرور',
@@ -49,7 +49,9 @@ class MyTranslation extends Translations {
           'Product':'منتجات',
           'Services':'خدمات',
           'Market':'تسوق',
-          'Restaurant':'مطاعم'
+          'Restaurant':'مطاعم',
+          'Confirm Password':'تأكيد كلمة المرور',
+          'Re-Enter Your Password':'أعد ادخال كلمة المرور'
         },
         'en': {
           'lang': 'Chose language',
@@ -97,7 +99,9 @@ class MyTranslation extends Translations {
           'Product': 'Product',
           'Services': 'Services',
           'Market': 'Market',
-          'Restaurant': 'Restaurant'
+          'Restaurant': 'Restaurant',
+          'Confirm Password':'Confirm Password',
+          'Re-Enter Your Password':'Re-Enter Your Password'
         }
       };
 }

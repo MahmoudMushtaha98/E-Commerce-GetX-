@@ -22,7 +22,7 @@ class TextFormFieldLogIn extends GetView<LogInController> {
           TextFormFieldWidget(
             width: width(context) * 0.9,
             height: 60,
-            hintText: 'email'.tr,
+            hintText: 'Email'.tr,
             label: 'Enter Your Email'.tr,
             iconData: Icons.email_outlined,
             formKey: controller.emailFormKey,
@@ -31,7 +31,7 @@ class TextFormFieldLogIn extends GetView<LogInController> {
           TextFormFieldWidget(
             width: width(context) * 0.9,
             height: 60,
-            hintText: 'password'.tr,
+            hintText: 'Password'.tr,
             label: 'Enter Your Password'.tr,
             iconData: Icons.lock_outline,
             formKey: controller.passFormKey,

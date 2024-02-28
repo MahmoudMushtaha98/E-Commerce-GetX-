@@ -1,10 +1,11 @@
 import 'package:e_commerce_getx/controller/login_controller.dart';
 import 'package:e_commerce_getx/core/constant/const_color.dart';
 import 'package:e_commerce_getx/core/constant/fontTyps.dart';
+import 'package:e_commerce_getx/core/services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 
-class TextFormFieldWidget extends GetView<LogInController> {
+class TextFormFieldWidget extends GetView<Services> {
   final double width;
   final String? hintText;
   final String? label;
@@ -59,13 +60,13 @@ class TextFormFieldWidget extends GetView<LogInController> {
                 fontWeight: FontWeight.w200,
                 color: grayColor,
                   fontFamily:
-                      controller.language!.contains('en') ? english : arabic),
+                      controller.sharedPreferences.getString('lang')!.contains('en') ? english : arabic),
             ):null,
             hintText: label,
             hintStyle: TextStyle(
               color: grayColor,
                 fontFamily:
-                    controller.language!.contains('en') ? english : arabic),
+                    controller.sharedPreferences.getString('lang')!.contains('en') ? english : arabic),
             suffixIcon: Icon(iconData,color: grayColor,),
             contentPadding: const EdgeInsets.all(40),
           ),

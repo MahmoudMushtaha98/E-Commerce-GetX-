@@ -1,3 +1,4 @@
+import 'package:e_commerce_getx/core/services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../controller/onboarding_controller.dart';
@@ -11,6 +12,7 @@ class PageViewWidget extends GetView<OnboardingController> {
 
   @override
   Widget build(BuildContext context) {
+    Services services = Get.find();
     return SizedBox(
       height: 600,
       child: PageView.builder(
@@ -24,7 +26,7 @@ class PageViewWidget extends GetView<OnboardingController> {
           children: [
             Text(
               onboardingData[index].title,
-              style: controller.language!.contains('en')
+              style: services.sharedPreferences.getString('lang')!.contains('en')
                   ? Theme.of(context).textTheme.bodyLarge
                   : Theme.of(context).textTheme.displayLarge,
             ),
@@ -36,7 +38,7 @@ class PageViewWidget extends GetView<OnboardingController> {
             Text(
               onboardingData[index].description,
               textAlign: TextAlign.center,
-              style: controller.language!.contains('en')
+              style: services.sharedPreferences.getString('lang')!.contains('en')
                   ? Theme.of(context).textTheme.bodyMedium
                   : Theme.of(context).textTheme.displayMedium,
             ),

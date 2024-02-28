@@ -2,13 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 import '../core/constant/onboarding_data.dart';
-import '../main.dart';
+
 
 class OnboardingController extends GetxController {
   int currentPage = 0;
 
   PageController? pageController;
-  String? language = sharedPreferences.getString('lang');
 
   next() {
     currentPage++;
