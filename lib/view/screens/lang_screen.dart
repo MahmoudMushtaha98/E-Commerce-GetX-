@@ -20,38 +20,48 @@ class LanguageScreen extends GetView<LocalController> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CircleAvatar(
-            radius: 50,
-            child: Image.asset('assets/images/jordan.png'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              InkWell(
+                onTap: () {
+                  controller.changeLang('ar');
+                  Get.offAllNamed(OnboardingScreen.screenRoute);
+                },
+                child: const Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 50,
+                      foregroundImage: AssetImage('assets/images/jordan.png'),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 8.0),
+                      child: Text('Arabic'),
+                    )
+                  ],
+                ),
+              ),
+              InkWell(
+                onTap: () {
+                  controller.changeLang('en');
+                  Get.offAllNamed(OnboardingScreen.screenRoute);
+                },
+                child: const Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 50,
+                      foregroundImage: AssetImage('assets/images/amirca.png'),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 8.0),
+                      child: Text('English'),
+                    )
+
+                  ],
+                ),
+              ),
+            ],
           ),
-          const SizedBox(
-            width: double.infinity,
-          ),
-          Text(
-            'lang'.tr,
-            style: Theme.of(context).textTheme.bodyLarge,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: CustomButtonWidget(
-              onTap: () {
-                controller.changeLang('ar');
-                Get.offAllNamed(OnboardingScreen.screenRoute);
-              },
-              text: 'AR',
-              color: Colors.blue,
-              fontFamily: Theme.of(context).textTheme.titleLarge!.fontFamily,
-            ),
-          ),
-          CustomButtonWidget(
-            onTap: () {
-              controller.changeLang('en');
-              Get.offAllNamed(OnboardingScreen.screenRoute);
-            },
-            text: 'EN',
-            color: Colors.blue,
-            fontFamily: Theme.of(context).textTheme.titleLarge!.fontFamily,
-          )
         ],
       ),
     );

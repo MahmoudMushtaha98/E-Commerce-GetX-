@@ -96,6 +96,18 @@ flutter:
         - asset: assets/font/english/PlayfairDisplay-Bold.ttf
           weight: 700
         - asset: assets/font/english/PlayfairDisplay-Regular.ttf
+    - family: Lato
+      fonts:
+        - asset: assets/font/Lato-Thin.ttf
+          weight: 100
+        - asset: assets/font/Lato-Light.ttf
+          weight: 300
+        - asset: assets/font/Lato-Regular.ttf
+          weight: 400
+        - asset: assets/font/Lato-Bold.ttf
+          weight: 700
+        - asset: assets/font/Lato-Black.ttf
+          weight: 900
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

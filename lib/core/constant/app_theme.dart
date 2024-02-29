@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 ThemeData english = ThemeData(
     textTheme: const TextTheme(
   bodyLarge: TextStyle(
-      fontFamily: 'PlayfairDisplay', fontWeight: FontWeight.bold, fontSize: 25),
+      fontFamily: 'Lato', fontWeight: FontWeight.bold, fontSize: 25),
   bodyMedium: TextStyle(
-      fontFamily: 'PlayfairDisplay',
+      fontFamily: 'Lato',
       fontSize: 20,
       fontWeight: FontWeight.bold,
       color: Color(0xffa4a3a4)),
   labelLarge: TextStyle(
-      fontFamily: 'PlayfairDisplay', fontWeight: FontWeight.bold, fontSize: 30),
+      fontFamily: 'Lato', fontWeight: FontWeight.bold, fontSize: 30),
 ));
 
 ThemeData arabic = ThemeData(
