@@ -2,7 +2,6 @@ import 'package:e_commerce_getx/core/services/services.dart';
 import 'package:e_commerce_getx/view/screens/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 
 class MyMiddleware extends GetMiddleware{
 

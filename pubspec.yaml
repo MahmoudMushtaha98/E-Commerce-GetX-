@@ -68,6 +68,8 @@ flutter:
     - assets/images/FaceBook.png
     - assets/images/Start.png
     - assets/svg/Service.svg
+    - assets/images/jordan.png
+    - assets/images/amirca.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

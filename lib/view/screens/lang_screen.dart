@@ -1,3 +1,4 @@
+import 'package:e_commerce_getx/core/constant/dimensions.dart';
 import 'package:e_commerce_getx/view/screens/onboarding_screen.dart';
 import 'package:e_commerce_getx/view/widget/custom_button_widget.dart';
 import 'package:flutter/material.dart';
@@ -13,9 +14,16 @@ class LanguageScreen extends GetView<LocalController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('lang'.tr),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          CircleAvatar(
+            radius: 50,
+            child: Image.asset('assets/images/jordan.png'),
+          ),
           const SizedBox(
             width: double.infinity,
           ),
