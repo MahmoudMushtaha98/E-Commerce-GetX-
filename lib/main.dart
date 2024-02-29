@@ -24,39 +24,7 @@ class MyApp extends GetView<LocalController> {
       debugShowCheckedModeBanner: false,
       locale: controller.language,
       translations: MyTranslation(),
-      theme: ThemeData(
-          textTheme: const TextTheme(
-              bodyLarge: TextStyle(
-                  fontFamily: 'PlayfairDisplay',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25),
-              bodyMedium: TextStyle(
-                  fontFamily: 'PlayfairDisplay',
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xffa4a3a4)),
-            labelLarge: TextStyle(
-                fontFamily: 'PlayfairDisplay',
-                fontWeight: FontWeight.bold,
-                fontSize: 30),
-            labelMedium: TextStyle(
-                fontFamily: 'Cairo',
-                fontWeight: FontWeight.bold,
-                fontSize: 30),
-            displayLarge: TextStyle(
-                fontFamily: 'Cairo',
-                fontWeight: FontWeight.bold,
-                fontSize: 25),
-            displayMedium: TextStyle(
-                fontFamily: 'Cairo',
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Color(0xffa4a3a4))
-          )),
-      initialRoute:
-      services.sharedPreferences.getString('lang') != null
-              ? OnboardingScreen.screenRoute
-              : null,
+      theme: controller.appTheme,
       getPages: route,
     );
   }

@@ -24,12 +24,7 @@ class SignUpButtonWidget extends GetView<LogInController> {
             style: TextStyle(
                 color: grayColor,
                 fontWeight: FontWeight.w300,
-                fontFamily: services.sharedPreferences.getString('lang')!.contains('en')
-                    ? Theme.of(context).textTheme.bodyMedium!.fontFamily
-                    : Theme.of(context)
-                    .textTheme
-                    .displayMedium!
-                    .fontFamily),
+                fontFamily: Theme.of(context).textTheme.bodyMedium!.fontFamily),
           ),
           InkWell(
             onTap: () => controller.signUpScreen(),
@@ -38,12 +33,7 @@ class SignUpButtonWidget extends GetView<LogInController> {
               style: TextStyle(
                   color: buttonColor,
                   fontWeight: FontWeight.w300,
-                  fontFamily: services.sharedPreferences.getString('lang')!.contains('en')
-                      ? Theme.of(context).textTheme.bodyMedium!.fontFamily
-                      : Theme.of(context)
-                      .textTheme
-                      .displayMedium!
-                      .fontFamily),
+                  fontFamily: Theme.of(context).textTheme.bodyMedium!.fontFamily),
             ),
           ),
         ],

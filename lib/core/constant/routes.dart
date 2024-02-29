@@ -1,3 +1,4 @@
+import 'package:e_commerce_getx/core/middleware/my_middleware.dart';
 import 'package:e_commerce_getx/view/screens/complete_profile_screen.dart';
 import 'package:e_commerce_getx/view/screens/navigation_bar.dart';
 import 'package:e_commerce_getx/view/screens/lang_screen.dart';
@@ -15,6 +16,9 @@ List<GetPage<dynamic>>? route = [
   GetPage(
     name: LanguageScreen.screenRoute,
     page: () => const LanguageScreen(),
+    middlewares: [
+      MyMiddleware()
+    ]
   ),
   GetPage(
     name: LogInScreen.screenRout,

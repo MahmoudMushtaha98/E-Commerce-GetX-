@@ -24,25 +24,26 @@ class LogInScreen extends StatelessWidget {
           'Sign In'.tr,
           style: TextStyle(
               color: grayColor,
-              fontFamily: services.sharedPreferences.getString('lang')!.contains('en')
-                  ? Theme.of(context).textTheme.bodyMedium!.fontFamily
-                  : Theme.of(context).textTheme.displayMedium!.fontFamily),
+              fontFamily: Theme.of(context).textTheme.bodyMedium!.fontFamily),
         ),
         centerTitle: true,
       ),
-      body: ListView(
-        children: [
-          const TitleAndSubTitle(
-              title: 'Welcome Back',
-              subTitle:
-                  'Sign in with your email and password or continue with social media'),
-          const TextFormFieldLogIn(),
-          LogInButtonWidget(() {
-            controller.logIn();
-          }),
-          const LogInTypesWidget(),
-          const SignUpButtonWidget()
-        ],
+      body: WillPopScope(
+        onWillPop: () => controller.onPressBack(),
+        child: ListView(
+          children: [
+            const TitleAndSubTitle(
+                title: 'Welcome Back',
+                subTitle:
+                    'Sign in with your email and password or continue with social media'),
+            const TextFormFieldLogIn(),
+            LogInButtonWidget(() {
+              controller.logIn();
+            }),
+            const LogInTypesWidget(),
+            const SignUpButtonWidget()
+          ],
+        ),
       ),
     );
   }

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:e_commerce_getx/view/screens/navigation_bar.dart';
 import 'package:e_commerce_getx/view/screens/signup_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,5 +21,14 @@ class LogInController extends GetxController {
 
   void signUpScreen(){
     Get.toNamed(SignUpScreen.screenRout);
+  }
+
+  onPressBack(){
+    Get.defaultDialog(
+      title: 'Warning'.tr,
+      middleText: 'Are You Sure You Want Exit'.tr,
+      onConfirm: () => exit(0),
+      onCancel: () => Get.back(),
+    );
   }
 }

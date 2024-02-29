@@ -24,9 +24,7 @@ class SignUpScreen extends StatelessWidget {
           'Sign Up'.tr,
           style: TextStyle(
               color: grayColor,
-              fontFamily: services.sharedPreferences.getString('lang')!.contains('en')
-                  ? Theme.of(context).textTheme.bodyMedium!.fontFamily
-                  : Theme.of(context).textTheme.displayMedium!.fontFamily),
+              fontFamily: Theme.of(context).textTheme.bodyMedium!.fontFamily),
         ),
         centerTitle: true,
       ),

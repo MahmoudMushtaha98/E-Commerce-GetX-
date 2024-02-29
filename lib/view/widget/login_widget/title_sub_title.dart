@@ -23,9 +23,7 @@ class TitleAndSubTitle extends GetView<Services> {
         children: [
           Text(
             title.tr,
-            style: controller.sharedPreferences.getString('lang')!.contains('en')
-                ? Theme.of(context).textTheme.labelLarge
-                : Theme.of(context).textTheme.labelMedium,
+            style: Theme.of(context).textTheme.labelLarge,
           ),
           SizedBox(
             width: width(context) * 0.65,
@@ -35,9 +33,7 @@ class TitleAndSubTitle extends GetView<Services> {
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: grayColor,
-                  fontFamily: controller.sharedPreferences.getString('lang')!.contains('en')
-                      ? Theme.of(context).textTheme.labelLarge!.fontFamily
-                      : Theme.of(context).textTheme.labelMedium!.fontFamily,
+                  fontFamily: Theme.of(context).textTheme.labelLarge!.fontFamily,
                   fontSize: 15),
             ),
           ),

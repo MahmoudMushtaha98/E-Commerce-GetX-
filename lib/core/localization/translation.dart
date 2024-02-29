@@ -51,7 +51,9 @@ class MyTranslation extends Translations {
           'Market':'تسوق',
           'Restaurant':'مطاعم',
           'Confirm Password':'تأكيد كلمة المرور',
-          'Re-Enter Your Password':'أعد ادخال كلمة المرور'
+          'Re-Enter Your Password':'أعد ادخال كلمة المرور',
+          'Warning':'تنبيه',
+          'Are You Sure You Want Exit':'هل أنت متأكد أنك تريد الخروج'
         },
         'en': {
           'lang': 'Chose language',
@@ -101,7 +103,9 @@ class MyTranslation extends Translations {
           'Market': 'Market',
           'Restaurant': 'Restaurant',
           'Confirm Password':'Confirm Password',
-          'Re-Enter Your Password':'Re-Enter Your Password'
+          'Re-Enter Your Password':'Re-Enter Your Password',
+          'Warning':'Warning',
+          'Are You Sure You Want Exit':'Are You Sure You Want Exit'
         }
       };
 }

@@ -35,16 +35,12 @@ class ButtonsWidget extends GetView<OnboardingController> {
                   textColor: Colors.white,
                   fontSize: height(context) * 0.023,
                   fontWeight: FontWeight.w500,
-                  fontFamily: services.sharedPreferences.getString('lang')!.contains('ar') ? Theme
-                      .of(context)
-                      .textTheme
-                      .displayLarge!
-                      .fontFamily : Theme.of(context).textTheme.titleLarge!.fontFamily,
+                  fontFamily: Theme.of(context).textTheme.titleLarge!.fontFamily,
                 ),
           ),
           CustomButtonWidget(
             onTap: () {
-              Get.offAllNamed(LogInScreen.screenRout);
+              controller.onPressSkip();
             },
             widthButton: width(context) * 0.75,
             heightButton: 50,

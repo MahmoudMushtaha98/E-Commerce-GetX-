@@ -1,4 +1,3 @@
-import 'package:e_commerce_getx/controller/login_controller.dart';
 import 'package:e_commerce_getx/core/constant/const_color.dart';
 import 'package:e_commerce_getx/core/constant/fontTyps.dart';
 import 'package:e_commerce_getx/core/services/services.dart';
@@ -54,20 +53,24 @@ class TextFormFieldWidget extends GetView<Services> {
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
                 borderSide: BorderSide(color: grayColor)),
-            label: hintText != null ?Text(
-              hintText!,
-              style: TextStyle(
-                fontWeight: FontWeight.w200,
-                color: grayColor,
-                  fontFamily:
-                      controller.sharedPreferences.getString('lang')!.contains('en') ? english : arabic),
-            ):null,
+            label: hintText != null
+                ? Text(
+                    hintText!,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w200,
+                        color: grayColor,
+                        fontFamily:
+                            Theme.of(context).textTheme.bodyLarge!.fontFamily),
+                  )
+                : null,
             hintText: label,
             hintStyle: TextStyle(
+                color: grayColor,
+                fontFamily: Theme.of(context).textTheme.bodyLarge!.fontFamily),
+            suffixIcon: Icon(
+              iconData,
               color: grayColor,
-                fontFamily:
-                    controller.sharedPreferences.getString('lang')!.contains('en') ? english : arabic),
-            suffixIcon: Icon(iconData,color: grayColor,),
+            ),
             contentPadding: const EdgeInsets.all(40),
           ),
         ),

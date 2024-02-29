@@ -21,9 +21,7 @@ class LastTextWidget extends GetView<Services> {
             color: grayColor,
             fontSize: 15,
             fontWeight: FontWeight.w300,
-            fontFamily: controller.sharedPreferences.getString('lang')!.contains('en')
-                ? Theme.of(context).textTheme.bodyMedium!.fontFamily
-                : Theme.of(context).textTheme.displayMedium!.fontFamily),
+            fontFamily: Theme.of(context).textTheme.bodyMedium!.fontFamily),
       ),
     );
   }

@@ -2,7 +2,6 @@
 import 'package:e_commerce_getx/core/services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../controller/login_controller.dart';
 import '../../../core/constant/const_color.dart';
 import '../../../core/constant/dimensions.dart';
 import '../custom_button_widget.dart';
@@ -26,12 +25,7 @@ final VoidCallback callback;
             text: '7'.tr,
             widthButton: width(context) * 0.9,
             fontSize: 20,
-            fontFamily: controller.sharedPreferences.getString('lang')!.contains('en')
-                ? Theme.of(context).textTheme.bodyMedium!.fontFamily
-                : Theme.of(context)
-                .textTheme
-                .displayMedium!
-                .fontFamily,
+            fontFamily: Theme.of(context).textTheme.bodyMedium!.fontFamily,
           )
         ],
       ),

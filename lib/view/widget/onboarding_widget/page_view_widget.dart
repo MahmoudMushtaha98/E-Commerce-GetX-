@@ -26,9 +26,7 @@ class PageViewWidget extends GetView<OnboardingController> {
           children: [
             Text(
               onboardingData[index].title,
-              style: services.sharedPreferences.getString('lang')!.contains('en')
-                  ? Theme.of(context).textTheme.bodyLarge
-                  : Theme.of(context).textTheme.displayLarge,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
             Image.asset(
               onboardingData[index].path,
@@ -38,9 +36,7 @@ class PageViewWidget extends GetView<OnboardingController> {
             Text(
               onboardingData[index].description,
               textAlign: TextAlign.center,
-              style: services.sharedPreferences.getString('lang')!.contains('en')
-                  ? Theme.of(context).textTheme.bodyMedium
-                  : Theme.of(context).textTheme.displayMedium,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           ],
         ),
