@@ -70,6 +70,11 @@ flutter:
     - assets/svg/Service.svg
     - assets/images/jordan.png
     - assets/images/amirca.png
+    - assets/images/Image Banner 2.png
+    - assets/images/Image Banner 3.png
+    - assets/images/Image Popular Product 1.png
+    - assets/images/Image Popular Product 2.png
+    - assets/images/Image Popular Product 3.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -53,7 +53,16 @@ class MyTranslation extends Translations {
           'Confirm Password':'تأكيد كلمة المرور',
           'Re-Enter Your Password':'أعد ادخال كلمة المرور',
           'Warning':'تنبيه',
-          'Are You Sure You Want Exit':'هل أنت متأكد أنك تريد الخروج'
+          'Are You Sure You Want Exit':'هل أنت متأكد أنك تريد الخروج',
+          'Search Product':'ابحث عن المنتج',
+          'Hello, ':'مرحبا، ',
+          'A Summer Surprise':'مفاجئة الصيف',
+          'Cashback 20%':'استرجاع 20%',
+          'Flash Deal':'صفقات تمت',
+          'Special For You':'مميز',
+          'Smart Phone':'الهواتف الذكية',
+          '18 Brands':'18 نوع',
+          'Popular Product':'المنتجات الأكثر شيوعاً'
         },
         'en': {
           'lang': 'Chose language',
@@ -105,7 +114,16 @@ class MyTranslation extends Translations {
           'Confirm Password':'Confirm Password',
           'Re-Enter Your Password':'Re-Enter Your Password',
           'Warning':'Warning',
-          'Are You Sure You Want Exit':'Are You Sure You Want Exit'
+          'Are You Sure You Want Exit':'Are You Sure You Want Exit',
+          'Search Product':'Search Product',
+          'Hello, ':'Hello, ',
+          'A Summer Surprise':'A Summer Surprise',
+          'Cashback 20%':'Cashback 20%',
+          'Flash Deal':'Flash Deal',
+          'Special For You':'Special For You',
+          'Smart Phone':'Smart Phone',
+          '18 Brands':'18 Brands',
+          'Popular Product':'Popular Product'
         }
       };
 }

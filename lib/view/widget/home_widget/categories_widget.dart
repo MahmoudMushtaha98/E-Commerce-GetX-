@@ -33,9 +33,7 @@ class CategoriesWidget extends GetView<HomeController> {
           style: TextStyle(
               color: Colors.black,
               fontSize: 15,
-              fontFamily: controller.language!.contains('en')
-                  ? Theme.of(context).textTheme.bodyMedium!.fontFamily
-                  : Theme.of(context).textTheme.displayMedium!.fontFamily),
+              fontFamily: Theme.of(context).textTheme.bodyMedium!.fontFamily),
         )
       ],
     );

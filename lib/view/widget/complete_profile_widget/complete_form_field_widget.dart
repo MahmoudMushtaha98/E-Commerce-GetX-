@@ -20,7 +20,7 @@ class CompleteFormFieldWidget extends GetView<CompleteProfileController> {
             height: 60,
             hintText: 'First Name'.tr,
             label: 'Enter Your First Name'.tr,
-            iconData: Icons.person_outline,
+            suffixIcon: Icons.person_outline,
             formKey: controller.fNameKey,
             contr: controller.fNameController),
         TextFormFieldWidget(
@@ -28,7 +28,7 @@ class CompleteFormFieldWidget extends GetView<CompleteProfileController> {
             height: 60,
             hintText: 'Last Name'.tr,
             label: 'Enter Your Last Name'.tr,
-            iconData: Icons.person_outline,
+            suffixIcon: Icons.person_outline,
             formKey: controller.lNameKey,
             contr: controller.lNameController),
         TextFormFieldWidget(
@@ -36,7 +36,7 @@ class CompleteFormFieldWidget extends GetView<CompleteProfileController> {
             height: 60,
             hintText: 'Phone Number'.tr,
             label: 'Enter Your Phone Number'.tr,
-            iconData: Icons.phone_android,
+            suffixIcon: Icons.phone_android,
             formKey: controller.phoneKey,
             contr: controller.phoneController),
         TextFormFieldWidget(
@@ -44,7 +44,7 @@ class CompleteFormFieldWidget extends GetView<CompleteProfileController> {
             height: 60,
             hintText: 'Address'.tr,
             label: 'Enter Your Address'.tr,
-            iconData: Icons.location_on_outlined,
+            suffixIcon: Icons.location_on_outlined,
             formKey: controller.addressKey,
             contr: controller.addressController),
       ],

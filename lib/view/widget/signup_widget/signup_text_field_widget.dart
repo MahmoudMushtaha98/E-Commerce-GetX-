@@ -22,7 +22,7 @@ class SignUpTextField extends GetView<SignUpController> {
             height: 60,
             hintText: 'Email'.tr,
             label: 'Enter Your Email'.tr,
-            iconData: Icons.email_outlined,
+            suffixIcon: Icons.email_outlined,
             formKey: controller.emailKey,
             contr: controller.emailController),
         TextFormFieldWidget(
@@ -30,7 +30,7 @@ class SignUpTextField extends GetView<SignUpController> {
             height: 60,
             hintText: 'Password'.tr,
             label: 'Enter Your Password'.tr,
-            iconData: Icons.lock_outline,
+            suffixIcon: Icons.lock_outline,
             formKey: controller.passKey,
             contr: controller.passController),
         TextFormFieldWidget(
@@ -38,7 +38,7 @@ class SignUpTextField extends GetView<SignUpController> {
             height: 60,
             hintText: 'Confirm Password'.tr,
             label: 'Re-Enter Your Password'.tr,
-            iconData: Icons.lock_outline,
+            suffixIcon: Icons.lock_outline,
             formKey: controller.rePasswordKey,
             contr: controller.rePassController),
       ],
