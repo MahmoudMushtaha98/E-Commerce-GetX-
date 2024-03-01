@@ -16,6 +16,7 @@ class MyMiddleware extends GetMiddleware{
     if(check??false){
       return const RouteSettings(name: LogInScreen.screenRout);
     }
+    return null;
     }
 
 }

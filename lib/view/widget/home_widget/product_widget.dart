@@ -1,5 +1,4 @@
 
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,7 @@ class ProductWidget extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: Colors.white,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(color: Colors.grey,blurRadius: 3,spreadRadius: 0.2)
           ]
         ),

@@ -1,10 +1,7 @@
 import 'package:e_commerce_getx/controller/onboarding_controller.dart';
 import 'package:e_commerce_getx/core/constant/const_color.dart';
-import 'package:e_commerce_getx/core/services/services.dart';
-import 'package:e_commerce_getx/view/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../core/constant/dimensions.dart';
 import '../custom_button_widget.dart';
 
@@ -15,7 +12,6 @@ class ButtonsWidget extends GetView<OnboardingController> {
 
   @override
   Widget build(BuildContext context) {
-    Services services = Get.find();
     return SizedBox(
       height: 150,
       child: Column(

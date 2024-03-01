@@ -1,4 +1,3 @@
-import 'package:e_commerce_getx/core/services/services.dart';
 import 'package:e_commerce_getx/view/widget/login_widget/login_button_widget.dart';
 import 'package:e_commerce_getx/view/widget/login_widget/login_typs_widget.dart';
 import 'package:e_commerce_getx/view/widget/login_widget/title_sub_title.dart';
@@ -17,7 +16,6 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SignUpController controller = Get.put(SignUpController());
-    Services services = Get.find();
     return Scaffold(
       appBar: AppBar(
         title: Text(

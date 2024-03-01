@@ -8,7 +8,6 @@ class Services extends GetxService{
 
   Future<Services> getData()async{
     sharedPreferences = await SharedPreferences.getInstance();
-    print(sharedPreferences.getString('lang'));
     return this;
   }
 

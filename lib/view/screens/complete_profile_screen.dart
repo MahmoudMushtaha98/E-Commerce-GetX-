@@ -1,11 +1,7 @@
-import 'dart:developer';
-
 import 'package:e_commerce_getx/controller/complete_profile_controller.dart';
 import 'package:e_commerce_getx/core/constant/dimensions.dart';
-import 'package:e_commerce_getx/core/services/services.dart';
 import 'package:e_commerce_getx/view/widget/login_widget/login_button_widget.dart';
 import 'package:e_commerce_getx/view/widget/login_widget/title_sub_title.dart';
-import 'package:e_commerce_getx/view/widget/text_form_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +16,6 @@ class CompleteProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     CompleteProfileController controller = Get.put(CompleteProfileController());
-    Services services = Get.find();
     return Scaffold(
       appBar: AppBar(),
       body: ListView(

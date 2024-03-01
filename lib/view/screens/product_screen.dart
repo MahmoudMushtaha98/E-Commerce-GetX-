@@ -78,7 +78,7 @@ class _ProductScreenState extends State<ProductScreen> {
                             onTap: () {
                               Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => AllStoresScreen(),));
+                                  MaterialPageRoute(builder: (context) => const AllStoresScreen(),));
                             },
                             child: Row(
                               children: [

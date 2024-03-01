@@ -38,6 +38,8 @@ dependencies:
   get: ^4.6.6
   flutter_svg: ^2.0.9
   shared_preferences: ^2.2.2
+  dio: ^5.4.1
+  skeletons: ^0.0.3
 
 dev_dependencies:
   flutter_test:

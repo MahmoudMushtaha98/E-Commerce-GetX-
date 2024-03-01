@@ -144,8 +144,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         if(lineText==3){
                           lineText=10;
                         }
-                        else
+                        else {
                           lineText=3;
+                        }
                       });
                     },
                     child: Padding(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../controller/HomeController.dart';
+import '../../../controller/home_controller.dart';
 import '../../../core/constant/const_color.dart';
 
 class CategoriesWidget extends GetView<HomeController> {

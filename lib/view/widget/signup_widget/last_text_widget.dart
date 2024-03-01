@@ -1,8 +1,6 @@
-import 'package:e_commerce_getx/controller/signup_controller.dart';
 import 'package:e_commerce_getx/core/services/services.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../core/constant/const_color.dart';
 
 class LastTextWidget extends GetView<Services> {

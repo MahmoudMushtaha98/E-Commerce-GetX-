@@ -1,6 +1,4 @@
-import 'package:e_commerce_getx/core/constant/dimensions.dart';
 import 'package:e_commerce_getx/view/screens/onboarding_screen.dart';
-import 'package:e_commerce_getx/view/widget/custom_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
