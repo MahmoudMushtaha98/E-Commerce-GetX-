@@ -1,18 +1,17 @@
+import 'package:e_commerce_getx/controller/home_controller.dart';
+import 'package:e_commerce_getx/model/product_model.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../core/constant/dimensions.dart';
 
-class PopularProductCardWidget extends StatelessWidget {
+class PopularProductCardWidget extends GetView<HomeController> {
   const PopularProductCardWidget({
     super.key,
-    required this.path,
-    required this.title,
-    required this.price,
+    required this.productModel,
   });
 
-  final String path;
-  final String title;
-  final String price;
+  final ProductModel productModel;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,7 @@ class PopularProductCardWidget extends StatelessWidget {
             decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(20))),
-            child: Image.network(path),
+            child: Image.network(productModel.image),
           ),
         ),
         Expanded(
@@ -35,7 +34,7 @@ class PopularProductCardWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
-                  title,
+                  productModel.title,
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.bodySmall,
@@ -44,7 +43,7 @@ class PopularProductCardWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      price,
+                      productModel.price,
                       style: TextStyle(
                           fontWeight:
                               Theme.of(context).textTheme.bodySmall!.fontWeight,
@@ -52,17 +51,27 @@ class PopularProductCardWidget extends StatelessWidget {
                               Theme.of(context).textTheme.bodySmall!.fontSize,
                           color: Colors.deepOrange),
                     ),
-                    Container(
-                      width: 20,
-                      height: 20,
-                      decoration: const BoxDecoration(
-                          color: Color(0xfff4f4f4), shape: BoxShape.circle),
-                      child: const Icon(
-                        Icons.favorite,
-                        color: Color(0xffdadde3),
-                        size: 12,
+                    GetBuilder<HomeController>(builder: (con) => InkWell(
+                      onTap: () {
+                        con.addFave(productModel);
+                      },
+                      child: Container(
+                        width: 20,
+                        height: 20,
+                        decoration: BoxDecoration(
+                            color: con.favorite.contains(productModel)
+                                ? const Color(0xfffeeae3)
+                                : const Color(0xfff4f4f4),
+                            shape: BoxShape.circle),
+                        child: Icon(
+                          Icons.favorite,
+                          color: con.favorite.contains(productModel)
+                              ? const Color(0xfffe4a4a)
+                              : const Color(0xffdadde3),
+                          size: 12,
+                        ),
                       ),
-                    )
+                    ),)
                   ],
                 )
               ],

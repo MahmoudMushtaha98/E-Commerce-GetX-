@@ -29,7 +29,7 @@ class HomeNavigationBar extends StatelessWidget {
         builder: (controller) {
           return [
             const HomeScreen(),
-            const ProductScreen(),
+            const FavoriteScreen(),
             const ServicesScreen(),
             const ProfileScreen(),
           ][controller.currentIndex];

@@ -9,32 +9,53 @@ class HomeController extends GetxController {
   List<ProductModel> productModel = [];
 
   bool isLoading = true;
+  List<ProductModel> favorite = [];
+  int dataId = 1;
 
-  Future<void> getData() async {
-    Dio dio = Dio();
-    try {
-      productModel.clear();
-      final response = await dio.get('https://fakestoreapi.com/products');
-      List data = response.data;
-      for (var element in data) {
-        productModel.add(ProductModel(
-            id: element['id'],
-            title: element['title'],
-            price: element['price'].toString(),
-            description: element['description'],
-            category: element['category'],
-            image: element['image'],
-            rating: element['rating'].toString()));
+  Future<void> indexIncrement() async {
+    if (dataId <= 20) {
+      for (int counter = 0; counter < 4; counter++) {
+        await getData(dataId);
+        dataId++;
       }
-      isLoading = false;
-    } catch (e) {
-      print(e);
+    }
+  }
+
+  void addFave(ProductModel productModel) {
+    if (favorite.contains(productModel)) {
+      favorite.remove(productModel);
+    } else {
+      favorite.add(productModel);
     }
     update();
   }
+
+  Future<void> getData(int id) async {
+    Dio dio = Dio();
+    try {
+      final response = await dio.get('https://fakestoreapi.com/products/$id');
+      Map data = response.data;
+      ProductModel newProduct = ProductModel(
+        id: data['id'],
+        title: data['title'],
+        price: data['price'].toString(),
+        description: data['description'],
+        category: data['category'],
+        image: data['image'],
+        rating: data['rating'].toString(),
+      );
+      productModel.add(newProduct);
+      isLoading = false;
+      update();
+    } catch (e) {
+      print(e);
+    }
+  }
+
   @override
-  void onInit() async{
-    await getData();
+  void onInit() async {
+    productModel.clear();
+    await indexIncrement();
     super.onInit();
   }
 }

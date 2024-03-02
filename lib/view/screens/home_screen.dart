@@ -1,8 +1,8 @@
+import 'package:e_commerce_getx/core/constant/const_color.dart';
 import 'package:e_commerce_getx/core/constant/dimensions.dart';
 import 'package:e_commerce_getx/view/widget/text_form_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:skeletons/skeletons.dart';
 import '../../controller/home_controller.dart';
 import '../widget/home_widget/category_widget.dart';
 import '../widget/home_widget/popular_product_card_widget.dart';
@@ -120,62 +120,61 @@ class HomeScreen extends StatelessWidget {
             builder: (controller) => SizedBox(
               height: 200,
               child: controller.isLoading
-                  ? SkeletonItem(
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) => Padding(
+                  ? ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) => Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 10),
                             child: Column(
-                                  children: [
-                                    Container(
-                                      width: width(context) * 0.35,
-                                      height: 120,
-                                      decoration: const BoxDecoration(
-                                          color: Colors.black,
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(20))),
-                                    ),
-                                    Container(
-                                      width: width(context) * 0.35,
-                                      height: 20,
-                                      margin:
-                                          const EdgeInsets.symmetric(vertical: 5),
-                                      decoration: const BoxDecoration(
-                                          color: Colors.black,
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(20))),
-                                    ),
-                                    Container(
-                                      width: width(context) * 0.35,
-                                      height: 20,
-                                      margin:
-                                          const EdgeInsets.symmetric(vertical: 5),
-                                      decoration: const BoxDecoration(
-                                          color: Colors.black,
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(20))),
-                                    ),
-                                  ],
+                              children: [
+                                Container(
+                                  width: width(context) * 0.35,
+                                  height: 120,
+                                  decoration: BoxDecoration(
+                                      color: grayColor,
+                                      borderRadius: const BorderRadius.all(
+                                          Radius.circular(20))),
                                 ),
+                                Container(
+                                  width: width(context) * 0.35,
+                                  height: 20,
+                                  margin:
+                                      const EdgeInsets.symmetric(vertical: 5),
+                                  decoration: BoxDecoration(
+                                      color: grayColor,
+                                      borderRadius: const BorderRadius.all(
+                                          Radius.circular(20))),
+                                ),
+                                Container(
+                                  width: width(context) * 0.35,
+                                  height: 20,
+                                  margin:
+                                      const EdgeInsets.symmetric(vertical: 5),
+                                  decoration: BoxDecoration(
+                                      color: grayColor,
+                                      borderRadius: const BorderRadius.all(
+                                          Radius.circular(20))),
+                                ),
+                              ],
+                            ),
                           ),
-                          itemCount: 4))
+                      itemCount: 4)
                   : ListView.separated(
                       scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) => index != 0
-                          ? InkWell(
-                              onTap: () async {
-                                await controller.getData();
-                              },
-                              child: PopularProductCardWidget(
-                                path: controller.productModel[index].image,
-                                title: controller.productModel[index].title,
-                                price:
-                                    '\$ ${controller.productModel[index].price}',
-                              ),
-                            )
-                          : SizedBox(
-                              width: width(context) * 0.05,
-                            ),
+                      itemBuilder: (context, index) {
+                        if(index == controller.productModel.length-1){
+                          controller.indexIncrement();
+                        }
+                        return index != 0
+                            ? InkWell(
+                                onTap: () async {},
+                                child: PopularProductCardWidget(
+                                  productModel: controller.productModel[index],
+                                ),
+                              )
+                            : SizedBox(
+                                width: width(context) * 0.05,
+                              );
+                      },
                       separatorBuilder: (context, index) => SizedBox(
                             width: index == 0 ? 0 : width(context) * 0.03,
                           ),
